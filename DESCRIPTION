@@ -1,0 +1,22 @@
+Package: sswr
+Title: Spatial Sampling with R
+Version: 0.2.0
+Date: 2022-03-21
+Authors@R: 
+    person("Dick", "Brus", , "dick.brus@wur.nl",
+        role = c("aut", "cre", "cph"),
+        comment = c(ORCID = "0000-0003-2194-4783"))
+Depends: R (>= 4.1.0)
+Imports: sp (>= 1.4-6), gstat (>= 2.0-0), MASS (>= 7.3-0), tibble (>=
+        3.1.6), dplyr (>= 1.0.0), stringr (>= 1.4.0)
+Description: Data for the Book Spatial Sampling With R.
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+LazyData: TRUE
+LazyDataCompression: xz
+NeedsCompilation: no
+Packaged: 2022-03-21 23:03:29 UTC; dennis
+Author: Dick Brus [aut, cre, cph] (<https://orcid.org/0000-0003-2194-4783>)
+Maintainer: Dick Brus <dick.brus@wur.nl>
