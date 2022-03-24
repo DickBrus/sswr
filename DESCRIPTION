@@ -1,7 +1,7 @@
 Package: sswr
 Title: Spatial Sampling with R
-Version: 0.2.0
-Date: 2022-03-21
+Version: 0.2.1
+Date: 2022-03-22
 Authors@R: 
     person("Dick", "Brus", , "dick.brus@wur.nl",
         role = c("aut", "cre", "cph"),
@@ -17,6 +17,6 @@ RoxygenNote: 7.1.2
 LazyData: TRUE
 LazyDataCompression: xz
 NeedsCompilation: no
-Packaged: 2022-03-21 23:03:29 UTC; dennis
+Packaged: 2022-03-23 11:40:48 UTC; dennis
 Author: Dick Brus [aut, cre, cph] (<https://orcid.org/0000-0003-2194-4783>)
 Maintainer: Dick Brus <dick.brus@wur.nl>

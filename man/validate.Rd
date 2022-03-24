@@ -4,10 +4,10 @@
 \alias{validate}
 \title{Validate input files}
 \usage{
-validate(sample, model, thetas, perturbation)
+validate(esample, model, thetas, perturbation)
 }
 \arguments{
-\item{sample}{\code{\link[sp]{SpatialPoints}} used for prediction at the
+\item{esample}{\code{\link[sp]{SpatialPoints}} used for prediction at the
 evaluation points or used for evaluation.}
 
 \item{model}{\pkg{gstat} model type of a priori semivariogram model.}

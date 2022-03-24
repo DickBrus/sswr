@@ -2,15 +2,15 @@
 #'
 #' This function checks various input files
 #'
-#' @param sample \code{\link[sp]{SpatialPoints}} used for prediction at the
+#' @param esample \code{\link[sp]{SpatialPoints}} used for prediction at the
 #'   evaluation points or used for evaluation.
 #' @param model \pkg{gstat} model type of a priori semivariogram model.
 #' @param thetas parameters of semivariogram model.
 #' @param perturbation proportion of a semivariogram parameter value added to
 #'   that value.
-validate <- function(sample, model, thetas, perturbation) {
-  if (!(class(sample) %in% c("SpatialPoints"))) {
-    stop("sample must be of class SpatialPoints", call. = FALSE)
+validate <- function(esample, model, thetas, perturbation) {
+  if (!(class(esample) %in% c("SpatialPoints"))) {
+    stop("esample must be of class SpatialPoints", call. = FALSE)
   }
   if (!(model %in% c("Exp", "Sph"))) {
     stop("model must be a character: Exp or Sph", call. = FALSE)
@@ -139,7 +139,7 @@ logdet <- function(points, model, thetas, perturbation = 0.01)  {
 #'
 #' @export
 MVKV <- function(points, psample, esample, model, thetas, perturbation = 0.01) {
-  validate(sample = esample, model, thetas, perturbation)
+  validate(esample = esample, model, thetas, perturbation)
   if (!(class(psample) %in% c("SpatialPoints"))) {
     stop("psample must be of class SpatialPoints", call. = FALSE)
   }
@@ -236,7 +236,7 @@ MVKV <- function(points, psample, esample, model, thetas, perturbation = 0.01) {
 #'
 #' @export
 MAKV <- function(points, esample, model, thetas, perturbation = 0.01)  {
-  validate(sample = esample, model, thetas, perturbation)
+  validate(esample = esample, model, thetas, perturbation)
   points <- as.data.frame(points)
   nobs <- nrow(points)
   coordinates(points) <- ~x + y
@@ -340,7 +340,7 @@ MAKV <- function(points, esample, model, thetas, perturbation = 0.01)  {
 #'
 #' @export
 MEAC <- function(points, esample, model, thetas, perturbation = 0.01)  {
-  validate(sample = esample, model, thetas, perturbation)
+  validate(esample = esample, model, thetas, perturbation)
   points <- as.data.frame(points)
   nobs <- nrow(points)
   coordinates(points) <- ~x + y
