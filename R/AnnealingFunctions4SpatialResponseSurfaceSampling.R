@@ -135,11 +135,11 @@ anneal <- function(mysample,
   candidates <- validate_colnames(candidates)
 
   #check columns of dpnt
-  if (!("x" %in% names(dpnt))) {
-    stop("x must be in data frame dpnt", call. = FALSE)
+  if (!("x1" %in% names(dpnt))) {
+    stop("x1 must be in data frame dpnt", call. = FALSE)
   }
-  if (!("y" %in% names(dpnt))) {
-    stop("y must be in data frame dpnt", call. = FALSE)
+  if (!("x2" %in% names(dpnt))) {
+    stop("x2 must be in data frame dpnt", call. = FALSE)
   }
 
   # set initial temperature
